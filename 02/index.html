@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>新的表单元素</title>
+</head>
+<body>
+    <form action="login">
+        商品的单价：￥<span id="price">3.5</span>
+        <br/>
+        购买的数量：<input type="number" id="count" min="1" max="99" value="1"/>
+        <br/>
+        小计：￥<output id="subtotal">3.5</output>
+    </form>
+    <script>
+        count.onchange=function(){
+            var c=this.value;
+            subtotal.innerHTML=parseFloat(price.innerHTML)*c;
+        }
+
+    </script>
+</body>
+</html>
